@@ -61,9 +61,7 @@ aside div {
 .profile img {
   max-width: 100%;
 }
-.card-img {
-  height: 100%;
-}
+
 footer {
   clear: both;
 }
@@ -424,6 +422,7 @@ sup {
   .project {
     display: block;
     width: 100%;
+    height: 260px;
   }
   .content {
     width: 100%;
