@@ -4,6 +4,7 @@
 body {
   font-family: Arial, sans-serif;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   white-space: nowrap;
@@ -11,7 +12,7 @@ body {
 }
 section {
   float: left;
-  width: 60%;
+  width: 55%;
 }
 .project {
   width: 50%;
@@ -44,11 +45,17 @@ section {
 }
 .aside-wrapper {
   float: right;
-  padding: 2em;
+  padding: 8px;
   width: 33%;
+  margin-right: 40px;
 }
 aside {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+    margin: 0 0 10px 0;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 8px;
+    border-bottom: 1px hidden #fff;
+  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); */
 }
 aside div {
   padding-bottom: 1em;
@@ -60,6 +67,8 @@ aside div {
   font-size: 13px;
 }
 .profile img {
+  border-radius: 8px 8px 0 0;
+
   max-width: 100%;
 }
 
@@ -74,15 +83,17 @@ a:hover {
   color: #1a0dab;
 }
 .header {
-  width: 100%;
+  /* width: 100%; */
   background-color: #fafafa;
+  display: flex;
+
 }
-.header h1 {
-  position: relative;
+.coogle {
+  /* position: relative; */
   top: 4px;
   left: 10px;
   font-family: "Product Sans", Arial, sans-serif;
-  display: inline-block;
+  display: flex;
   margin: 10px;
   font-size: 2.2em;
   font-weight: 400;
@@ -92,7 +103,7 @@ h2 {
   line-height: 1.2;
   margin: 0 0 -17px;
   overflow: hidden;
-  font-family: arial, sans-serif-light, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
 }
@@ -102,7 +113,7 @@ h4 {
 #title {
   margin-left: 4px;
   font-size: 14px;
-  color: gray;
+  color: #777777;
   font-weight: 400;
 }
 hr.style {
@@ -146,6 +157,9 @@ a#date {
   position: relative;
   display: inline-block;
   width: 480px;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
 }
 .search {
   font-size: 1em;
@@ -157,8 +171,16 @@ a#date {
   padding: 0.8em;
   font-family: Arial;
   outline: none;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
-  border: none;
+  border: 1px solid #DFE1E5;
+  border-radius: 20px;
+}
+ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+} 
+li {
+  display: block
 }
 .search-box:after {
   color: #4285f4;
@@ -170,7 +192,8 @@ a#date {
   padding-right: 0.5em;
 }
 .search:hover {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-color: rgba(223,225,229,0);
 }
 ::-webkit-input-placeholder {
   color: #000;
@@ -189,8 +212,9 @@ a#date {
   top: 28px;
   right: 45px;
   display: inline;
-  float: right;
-  height: 15px;
+}
+.container {
+  width: 100%;
 }
 .sign-in {
   font-family: Arial, sans-serif;
@@ -215,7 +239,7 @@ a#date {
 }
 .christle {
   font-style: italic;
-  color: #1a0dab;
+  color: #1967D2;
   font-weight: 700;
 }
 .main-nav {
@@ -243,11 +267,11 @@ a#date {
   color: #4285f4;
 }
 .date {
-  color: gray;
+  color: #777777;
 }
 .content {
   margin-top: 24px;
-  margin-left: 182px;
+  margin-left: 160px;
 }
 .content h5 {
   font-size: 0.8em;
@@ -261,7 +285,7 @@ a#date {
   font-family: Arial, sans-serif;
   font-size: 1.1em;
   font-weight: 100;
-  color: #1a0dab;
+  color: #1967D2;
 }
 .title-link:hover {
   text-decoration: underline;
@@ -321,11 +345,11 @@ sup {
   color: #000;
 }
 .bottom-nav {
-  margin-left: 91px;
+  margin-left: 129px;
 }
 .bottom-nav li {
   font-size: 0.8em;
-  margin: 15px;
+  margin: 16px;
   display: inline;
   list-style: none;
 }
@@ -384,7 +408,11 @@ sup {
   .header {
     margin: 0;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  
   .sign-in,
   .nine-icon {
     display: none;
@@ -392,7 +420,8 @@ sup {
   .search-box {
     display: block;
     margin: 0 auto;
-    width: 410px;
+    width: 100%;
+    padding: 0 15px;
   }
   .search-box:after {
     display: none;
@@ -435,11 +464,12 @@ sup {
   }
   .experience a {
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
   }
   .suggestions {
     padding-top: 0;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 16px;
   }
   .suggestions h4 {
     margin: 1px;
@@ -456,18 +486,15 @@ sup {
 }
 @media screen and (max-width: 478px) {
   .aside-wrapper {
-    padding: 1em 2em;
+    padding: 16px 8px;
   }
   .content {
-    padding: 1em 2em;
-  }
-  .search-box {
-    width: 295px;
+    padding: 0 8px;
   }
   .search {
     width: 100%;
   }
   #employ {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
